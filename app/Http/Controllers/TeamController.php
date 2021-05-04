@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\IndexArticles;
 use App\Http\Requests\StoreTeam;
-use App\Models\Article;
 use App\Models\Category;
 use App\Models\Team;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

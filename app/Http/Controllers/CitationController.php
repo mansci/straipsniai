@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Citation;
-use Illuminate\Http\Request;
 
 class CitationController extends Controller
 {

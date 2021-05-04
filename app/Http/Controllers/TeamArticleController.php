@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreArticle;
 use App\Jobs\ProcessArticle;
-use App\Models\Article;
 use App\Models\Category;
 use App\Models\Team;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class TeamArticleController extends Controller
 {

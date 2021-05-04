@@ -2,8 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Category;
-use App\Models\Team;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IndexArticles extends FormRequest

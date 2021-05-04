@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Team;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreArticle extends FormRequest

@@ -41,6 +41,13 @@ class CategoryPolicy
     {
         return $user->role == 'admin';
     }
+
+    /**
+     * Determine whether the user can delete categories.
+     *
+     * @param  \App\User  $user
+     * @return mixed
+     */
     public function delete(User $user)
     {
         return $user->role == 'admin';

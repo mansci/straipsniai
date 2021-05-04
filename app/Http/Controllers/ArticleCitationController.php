@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCitation;
 use App\Models\Article;
-use App\Models\Citation;
-use Illuminate\Http\Request;
 
 class ArticleCitationController extends Controller
 {
