@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\IndexArticles;
-use App\Jobs\ProcessArticle;
-use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Citation;
 use Illuminate\Http\Request;
 use App\Models\Article;
-use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
