@@ -1,0 +1,13 @@
+{
+    "Login": "Prisijungti",
+    "Register": "Registruotis",
+    "E-Mail Address": "El. pašto adresas",
+    "Password": "Slaptažodis",
+    "Remember Me": "Prisiminti mane",
+    "Forgot Your Password?": "Pamirštas slaptažodis?",
+    "Reset Password": "Atkurti slaptažodį",
+    "Send Password Reset Link": "Išsiųsti slaptažodžio priminimo nuorodą",
+    "Name": "Vardas",
+    "Confirm Password": "Patvirtinti slaptažodį",
+    "Logout": "Atsijungti"
+}
