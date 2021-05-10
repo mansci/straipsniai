@@ -63,8 +63,6 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article, Comment $comment, Citation $citation)
     {
-        $article->comments()->delete();
-        $article->citations()->delete();
         $article->delete();
         return redirect()->route('teams.show', ['team' => $article->team])->with('success', 'article.destroy');
     }

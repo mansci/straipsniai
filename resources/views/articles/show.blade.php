@@ -39,12 +39,38 @@
             <tr>
                 <th scope="col">Citatos</th>
                 <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
             @foreach ($article->citations as $citation)
                 <tr>
-                    <td>{{ $citation->text }}</td>
+                    <td>
+                        {{ $citation->text }}
+                        <br>
+                        Komentarai:
+                        <ul>
+                        @foreach ($citation->comments as $comment)
+                            <li>
+                                {{ $comment->text }}
+                                <form method="POST" action="{{ route('citations.comments.destroy', ['comment' => $comment, 'citation' => $citation]) }}" style="display: inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-primary">
+                                        X
+                                    </button>
+                                </form>
+                            </li>
+                        @endforeach
+                        </ul>
+                    </td>
+                    <td>
+                        <form action="{{ route('citations.comments.store', ['article' => $article, $citation]) }}" method="POST">
+                            @csrf
+                            <textarea name="text" id="text" placeholder="Įrašykite komentarą" required autofocus cols="30" rows="2"> </textarea>
+                            <button type="submit" style="float:right" class="btn btn-primary">Pridėti komentarą </button>
+                        </form>
+                    </td>
                     <td>
                         <form method="POST" action="{{ route('citations.destroy', ['article' => $article, 'citation' => $citation]) }}">
                             @csrf
@@ -66,6 +92,6 @@
             <button type="submit" class="btn btn-primary" style="display: none;" id="pdfbutton">Cituoti</button>
         </form>
         <pre style="background-color: white; padding: 16px;" id="pdftext">
-            {{ $article->text }}
+            {!! preg_replace($article->citations->pluck('text')->unique()->map(function ($text) { return preg_quote($text, '/'); })->map(function ($text) { return "/($text)/"; })->all(), '<span style="background-color: yellow">${1}</span>', strip_tags($article->text)) !!}
         </pre>
 @endsection

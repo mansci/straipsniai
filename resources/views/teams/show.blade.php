@@ -7,10 +7,17 @@
             <div class="col-md-12 bg-light text-right">
                 <form method="GET" action="{{ route('teams.show', ['team' => $team]) }}" style="display: inline-block">
                     <label for="title">Pasirinkite kategoriją</label>
-                    <select name="category_id" id="category_id">
+                    <select name="category_id" id="category_id" onchange="this.form.submit()">
                         <option> </option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}" {{ $category_id == $category->id ? "selected" : "" }} >{{ $category->name }} </option>
+                        @endforeach
+                    </select>
+                    <label for="title">Pasirinkite kalba</label>
+                    <select name="language" id="language" onchange="this.form.submit()">
+                        <option> </option>
+                        @foreach ($languages as $language_id)
+                            <option value="{{ $language_id }}" {{ $language_id == $language ? "selected" : "" }} >{{ $language_id }} </option>
                         @endforeach
                     </select>
                     <input type="text" id="query" name="query" value="{{ old('query', $query) }}" placeholder="Paieška">

@@ -24,4 +24,12 @@ class Citation extends Model
     {
         return $this->belongsTo(Article::class);
     }
+
+    /**
+     * Get the comments of this citation.
+     */
+    public function comments()
+    {
+        return $this->hasMany(CitationComment::class);
+    }
 }

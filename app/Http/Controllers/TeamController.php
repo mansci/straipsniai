@@ -55,6 +55,16 @@ class TeamController extends Controller
         if ($request->filled('category_id')) {
             $query->where('category_id', '=', $request->query('category_id'));
         }
-        return view('teams.show', ['team' => $team, 'articles' => $query->get(), 'categories' => Category::all(), 'query' => $request->query('query'), 'category_id' => $request->query('category_id')]);
+        if ($request->filled('language')) {
+            $query->where('language', '=', $request->query('language'));
+        }
+        return view('teams.show', [
+            'team' => $team,
+            'articles' => $query->get(),
+            'categories' => Category::all(),
+            'query' => $request->query('query'),
+            'category_id' => $request->query('category_id'),
+            'languages' => $team->articles->pluck('language')->unique(),
+            'language' => $request->query('language')]);
     }
 }

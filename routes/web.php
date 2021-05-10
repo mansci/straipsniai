@@ -30,3 +30,4 @@ Route::resource('articles.comments', \App\Http\Controllers\CommentController::cl
 Route::resource('teams', \App\Http\Controllers\TeamController::class)->only(['index', 'store', 'show']);
 Route::resource('teams.articles', \App\Http\Controllers\TeamArticleController::class)->only(['create', 'store']);
 Route::resource('teams.users',\App\Http\Controllers\TeamUserController::class)->only(['index', 'store', 'destroy']);
+Route::resource('citations.comments', \App\Http\Controllers\CitationCommentController::class)->only('store','destroy');

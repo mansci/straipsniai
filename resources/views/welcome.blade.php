@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Straipsnių analizės informacinė sistema</title>
+    <title>Literatūros šaltinių valdymo informacinė sistema</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,7 +21,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Straipsnių analizės informacinė sistema</title>
+    <title>Literatūros šaltinių valdymo informacinė sistema</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -85,7 +85,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                Straipsnių analizės informacinė sistema
+                Literatūros šaltinių valdymo informacinė sistema
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -171,7 +171,7 @@
 </div>
 <div class="content">
     <div class="title m-b-md">
-        Sveiki atvykę į straipsnių analizės informacinę sistemą, norėdami tęsti - prisijunkite.
+        Sveiki atvykę į literatūros šaltinių valdymo informacinę sistemą, norėdami tęsti - prisijunkite.
     </div>
     <div style="text-align: center;"><img src="{{ URL::to('/img/intro.jpg') }}" width="580" height="350"></div>
 </div>
