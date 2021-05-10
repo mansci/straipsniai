@@ -57,7 +57,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-primary">
-                                        X
+                                        Ištrinti
                                     </button>
                                 </form>
                             </li>
