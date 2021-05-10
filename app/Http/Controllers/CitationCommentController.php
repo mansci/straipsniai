@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreComment;
 use App\Models\Citation;
 use App\Models\CitationComment;
-use Illuminate\Http\Request;
 
 class CitationCommentController extends Controller
 {
