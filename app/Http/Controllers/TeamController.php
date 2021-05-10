@@ -48,7 +48,6 @@ class TeamController extends Controller
                 ->where(function($query) use($like) {
                     $query->where('text', 'like', $like)
                         ->orWhere('author', 'like', '%' . $like)
-                        ->orWhere('language', 'like', '%' . $like)
                         ->orWhere('title', 'like', '%' . $like);
                 });
         }
