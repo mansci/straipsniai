@@ -13,7 +13,7 @@
                             <option value="{{ $category->id }}" {{ $category_id == $category->id ? "selected" : "" }} >{{ $category->name }} </option>
                         @endforeach
                     </select>
-                    <label for="title">Pasirinkite kalba</label>
+                    <label for="title">Pasirinkite kalbą</label>
                     <select name="language" id="language" onchange="this.form.submit()">
                         <option> </option>
                         @foreach ($languages as $language_id)
