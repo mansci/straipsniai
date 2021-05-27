@@ -42,6 +42,8 @@ class UserController extends Controller
      */
     public function update(UpdateUser $request, User $user)
     {
+        if ($user-> role === 'admin' && $request->input('role') === 'user' && User::where(['role' => 'admin'])->count() < 2)
+            return redirect()->route('users.show', $user)->with('alert', 'users.update');
         $user->update($request->validated());
         return redirect()->route('users.show', $user)->with('success', 'users.update');
     }
